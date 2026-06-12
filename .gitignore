@@ -1,0 +1,12 @@
+.env
+
+# Python virtual environment folder created by uv
+.venv/
+
+# Python compiled cache bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE configurations (optional but helpful if you use VS Code)
+.vscode/
