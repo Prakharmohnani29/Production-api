@@ -110,5 +110,12 @@ class RequestTimer:
         self.start = time.time()
         return self
 
+    @property
+    def elapsed_ms(self) -> float:
+        """Dynamically calculates the elapsed execution time in milliseconds."""
+        return (time.time() - self.start) * 1000
+
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.elapsed_ms = (time.time() - self.start) * 1000
+        # Time processing is calculated dynamically via property, 
+        # allowing __exit__ to pass safely.
+        pass
